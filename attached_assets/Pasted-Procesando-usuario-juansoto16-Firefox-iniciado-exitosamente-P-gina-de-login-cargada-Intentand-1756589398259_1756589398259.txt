@@ -1,0 +1,37 @@
+Procesando usuario: juansoto16
+✓ Firefox iniciado exitosamente
+Página de login cargada.
+Intentando iniciar sesión...
+Sesión iniciada correctamente.
+No apareció popup de cambio de contraseña.
+Navegando a sección LISTA DE APLICACIONES...
+Sección del formulario cargada.
+[2025-08-30 21:28:39 +0000] [4797] [CRITICAL] WORKER TIMEOUT (pid:5252)
+[2025-08-30 21:28:39 +0000] [5252] [ERROR] Error handling request /upload
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/app.py", line 81, in upload_file
+    completar_formulario()
+  File "/home/runner/workspace/app.py", line 266, in completar_formulario
+    time.sleep(0.5)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-08-30 21:28:39 +0000] [5252] [INFO] Worker exiting (pid: 5252)
+[2025-08-30 21:28:39 +0000] [5830] [INFO] Booting worker with pid: 5830
